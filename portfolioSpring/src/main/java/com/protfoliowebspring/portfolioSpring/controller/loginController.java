@@ -1,5 +1,7 @@
 package com.protfoliowebspring.portfolioSpring.controller;
 
+import com.protfoliowebspring.portfolioSpring.dtos.DTOlogin;
+import com.protfoliowebspring.portfolioSpring.dtos.DTOloginOut;
 import com.protfoliowebspring.portfolioSpring.service.loginService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -12,7 +14,7 @@ public class loginController {
     @Autowired
     public loginService logService;
     @PostMapping("/login")
-    public String autenticacionUsuario(@RequestBody String user,@RequestBody String password){
-        return logService.autentificarUsuario(user,password);
+    public DTOloginOut autenticacionUsuario(@RequestBody DTOlogin dto){
+        return logService.autentificarUsuario(dto);
     }
 }

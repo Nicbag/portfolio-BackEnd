@@ -26,11 +26,11 @@ public class educacionService implements  ieducacionService{
         for(educacion e: edu){
             DTOEducacion dto= new DTOEducacion();
             dto.setIdEducacion(e.getIdEducacion());
-            dto.setEspecialidadEduacion(e.getEspecialidadEduacion());
-            dto.setFechainicioEducacion(e.getFechainicioEduacion());
-            dto.setFechafinEducacion(e.getFechafinEduacion());
+            dto.setEspecialidadEducacion(e.getEspecialidadEducacion());
+            dto.setFechainicioEducacion(e.getFechainicioEducacion());
+            dto.setFechafinEducacion(e.getFechafinEducacion());
             dto.setInstitucionEducacion(e.getInstitucionEducacion());
-            dto.setFotoEducacion(e.getFotoEduacion());
+            dto.setFotoEducacion(e.getFotoEducacion());
             educacion.add(dto);
         }
         return educacion;
@@ -40,10 +40,10 @@ public class educacionService implements  ieducacionService{
     public void agregarEducacion(DTOEducacion dto) {
         educacion e= new educacion();
         e.setInstitucionEducacion(dto.getInstitucionEducacion());
-        e.setEspecialidadEduacion(dto.getEspecialidadEduacion());
-        e.setFechainicioEduacion(dto.getFechainicioEducacion());
-        e.setFechafinEduacion(dto.getFechafinEducacion());
-        e.setFotoEduacion(dto.getFotoEducacion());
+        e.setEspecialidadEducacion(dto.getEspecialidadEducacion());
+        e.setFechainicioEducacion(dto.getFechainicioEducacion());
+        e.setFechafinEducacion(dto.getFechafinEducacion());
+        e.setFotoEducacion(dto.getFotoEducacion());
         List<persona> per= perRespository.findAll();
         for (persona p: per){
             e.setPersona(p);
@@ -62,10 +62,10 @@ public class educacionService implements  ieducacionService{
             educacion e = optionalEducacion.get();
             e.setIdEducacion(dto.getIdEducacion());
             e.setInstitucionEducacion(dto.getInstitucionEducacion());
-            e.setEspecialidadEduacion(dto.getEspecialidadEduacion());
-            e.setFechainicioEduacion(fechainiact);
-            e.setFechafinEduacion(fechafinact);
-            e.setFotoEduacion(dto.getFotoEducacion());
+            e.setEspecialidadEducacion(dto.getEspecialidadEducacion());
+            e.setFechainicioEducacion(fechainiact);
+            e.setFechafinEducacion(fechafinact);
+            e.setFotoEducacion(dto.getFotoEducacion());
             eduRepository.save(e);
         }
     }

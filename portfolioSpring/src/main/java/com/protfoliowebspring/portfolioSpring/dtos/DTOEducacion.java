@@ -13,7 +13,7 @@ import java.sql.Date;
 public class DTOEducacion {
     private Long idEducacion;
     private String institucionEducacion;
-    private String especialidadEduacion;
+    private String especialidadEducacion;
     private String fotoEducacion;
     private Date fechainicioEducacion;
     private Date fechafinEducacion;
