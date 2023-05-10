@@ -10,7 +10,7 @@ import com.protfoliowebspring.portfolioSpring.service.personaService;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:4200")
+@CrossOrigin(origins = "*")
 @RequestMapping("/api")
 public class personaController {
 
